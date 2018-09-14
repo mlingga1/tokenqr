@@ -17,24 +17,28 @@ class Config():
     LINE_CERTIFICATE_PATH       = '/Q'
     LINE_CHAN_QUERY_PATH        = '/CH4'
     LINE_SQUARE_QUERY_PATH      = '/SQS1'
+    LINE_SHOP_QUERY_PATH        = '/SHOP4'
+    
+    LINE_JUNGEL_PANG            = 'https://game.linefriends.com/jbp-lcs-ranking/lcs/sendMessage'
 
     CHANNEL_ID = {
-        'LINE_TIMELINE': '1341209950',
+        'LINE_TIMELINE': '1341209850',
         'LINE_WEBTOON': '1401600689',
         'LINE_TODAY': '1518712866',
         'LINE_STORE': '1376922440',
         'LINE_MUSIC': '1381425814',
-        'LINE_SERVICES': '1459630796'
+        'LINE_SERVICES': '1459630796',
+        'JUNGEL_PANG': '1526709289'
     }
 
-    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[368]
-    APP_VER     = '7.18.1'
+    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[304]
+    APP_VER     = '8.12.2'
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'SlackBOT'
+    SYSTEM_NAME = 'Priv8-L1ng'
     SYSTEM_VER  = '11.2.5'
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
     def __init__(self):
         self.APP_NAME = '%s\t%s\t%s\t%s' % (self.APP_TYPE, self.APP_VER, self.SYSTEM_NAME, self.SYSTEM_VER)
-        self.USER_AGENT = 'SlackBOT/%s' % self.APP_VER
+        self.USER_AGENT = 'Line/%s' % self.APP_VER
